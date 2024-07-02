@@ -1,0 +1,50 @@
+html{
+  background-color: #D9C5C1CC;
+}
+
+h1{
+  font-family: "Arial Black", "sans-serif";
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+h4{
+  margin-top: 0;
+  font-family: Arial, "sans-serif";
+}
+
+main{
+  width: 90%;
+  margin: 50px auto;
+  padding: 10px;
+  background-color: #261B15;
+  font-family: "Helvetica",sans-serif;
+  text-align: center;
+  color: #D9C5C1;
+}
+
+p,ul{
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: left;
+  list-style-type: square;
+  
+}
+
+li{
+  padding-bottom: 30px;
+}
+
+#image{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 50px auto 10px auto;
+  object-fit: cover;
+}
+
+#text-link, #list-title, span{
+  font-weight: 700;
+}
