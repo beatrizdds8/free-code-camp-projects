@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>CSS Flexbox Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>CSS Flexbox Documentation</h1>
+      </header>
+      <div id="links">
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#CSS_Flex_Container">CSS Flex Container</a>
+      <a class="nav-link" href="#CSS_Flex_Items">CSS Flex Items</a>
+      <a class="nav-link" href="#CSS_flex-basis_Property">CSS flex-basis Property</a>
+      <a class="nav-link" href="#CSS_flex-direction_Property">CSS flex-direction Property</a>
+      <a class="nav-link" href="#CSS_flex-wrap_Property">CSS flex-wrap Property</a>
+      <a class="nav-link" href="#CSS_flex-flow_Property">CSS flex-flow Property</a>
+      <a class="nav-link" href="#CSS_flex-grow_Property">CSS flex-grow Property</a>
+      <a class="nav-link" href="#CSS_flex-shrink_Property">CSS flex-shrink Property</a>
+      <a class="nav-link" href="#CSS_flex_Property">CSS flex Property</a>
+      <a class="nav-link" href="#CSS_Flex_Responsive">CSS Flex Responsive</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>
+          <h1>Introduction</h1>
+        </header>
+        <p>Before the Flexbox (Flexible Box) Layout module, there were four layout modes:</p>
+          <ul>
+            <li>Block, for sections in a webpage</li>
+            <li>Inline, for text</li>
+            <li>Table, for two-dimensional table data</li>
+            <li>Positioned, for explicit position of an element</li>
+          </ul>
+          <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+          <p>The flexbox properties are supported in all modern browsers.</p>
+      </section>
+      <section id="CSS_Flex_Container" class="main-section">
+        <header>
+          <h1>CSS Flex Container</h1>
+        </header>
+        <p>To start using the Flexbox model, you need to first define a flex container.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>A flex container with three flex items:</p>
+          <pre><code>&lt;div class="flex-container"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <p>The flex container becomes flexible by setting the <code>display</code> property to <code>flex</code>:</p>
+        <div class="example">
+          <h4>Example</h4>
+          <pre><code>.flex-container {
+  display: flex;
+}</code></pre>
+        </div>
+      </section>
+      <section id="CSS_Flex_Items" class="main-section">
+        <header>
+          <h1>CSS Flex Items</h1>
+        </header>
+        <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+        <p>The flex item properties are:</p>
+        <ul>
+          <li><code>align-self</code></li>
+          <li><code>flex</code></li>
+          <li><code>flex-basis</code></li>
+          <li><code>flex-grow</code></li>
+          <li><code>flex-shrink</code></li>
+          <li><code>order</code></li>
+        </ul>
+      </section>
+      <section id="CSS_flex-basis_Property" class="main-section">
+        <header>
+          <h1>CSS flex-basis Property</h1>
+        </header>
+        <p>The <code>flex-basis</code> property specifies the initial length of a flexible item.</p>
+        <p><span class="bold">Note:<span> If the element is not a flexible item, the <code>flex-basis</code> property has no effect.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Set the initial length of the second flex-item to 100 pixels:</p>
+          <pre><code>div:nth-of-type(2) {
+  flex-basis: 100px;
+}</code></pre>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><i>number</i><p>A number followed by a length unit (<i>px</i>, <i>em</i>), or percentage(<i>%</i>), specifying the initial length of the flexible item(s).</p></li>
+          <li><code>auto</code><p>Default value. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content.</p></li>
+        </ul>
+      </section>
+      <section id="CSS_flex-direction_Property" class="main-section">
+        <header>
+          <h1>CSS flex-direction Property</h1>
+        </header>
+        <p>The <code>flex-direction</code> property specifies the direction of the flexible items.</p>
+        <p><span class="bold">Note:</span> If the element is not a flexible item, the flex-direction property has no effect</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Set the direction of the flexible items inside the <code>div</code> element in reverse order:</p>
+          <pre><code>div {
+  display: flex;
+  flex-direction: row-reverse;
+}</code></pre>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><code>column</code><p>The flexible items are displayed vertically, as a column.</p></li>
+          <li><code>column-reverse</code><p>Same as column, but in reverse order.</p></li>
+          <li><code>row</code><p>Default value. The flexible items are displayed horizontally, as a row.</p></li>
+          <li><code>row-reverse</code><p>Same as row, but in reverse order.</p></li>
+        </ul>
+      </section>
+      <section id="CSS_flex-wrap_Property" class="main-section">
+        <header>
+          <h1>CSS flex-wrap Property</h1>
+        </header>
+        <p>The <code>flex-wrap</code> property specifies whether the flexible items should wrap or not.</p>
+        <p><span class="bold">Note:<span> If the elements are not flexible items, the <code>flex-wrap</code> property has no effect.</p>
+       <div class="example">
+          <h4>Example</h4>
+          <p>Make the flexible items wrap if necessary:</p>
+          <pre><code>div {
+  display: flex;  
+  flex-wrap: wrap;
+}</code></pre>
+        </div> 
+        <h4>Property Values</h4>
+        <ul>
+          <li><code>nowrap</code><p>Default value. Specifies that the flexible items will not wrap.</p></li>
+          <li><code>wrap</code><p>Specifies that the flexible items will wrap if necessary.</p></li>
+          <li><code>wrap-reverse</code><p>Specifies that the flexible items will wrap, if necessary, in reverse order.</p></li>
+        </ul>
+      </section>
+      <section id="CSS_flex-flow_Property" class="main-section">
+        <header>
+          <h1>CSS flex-flow Property</h1>
+        </header>
+        <p>The <code>flex-flow</code> property is a shorthand property for:</p>
+        <ul>
+          <li><code>flex-direction</code></li>
+          <li><code>flex-wrap</code></li>
+        </ul>
+        <p><span class="bold">Note:<span> If the elements are not flexible items, the <code>flex-flow</code> property has no effect.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Make the flexible items display in reverse order, and wrap if necessary:</p>
+          <pre><code>div {
+  display: flex;
+  flex-flow: row-reverse wrap;
+}</code></pre>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><code>flex-direction</code> property possible values.</li>
+          <li><code>flex-wrap</code> property possible values.</li>
+        </ul>
+      </section>
+      <section id="CSS_flex-grow_Property" class="main-section">
+        <header>
+          <h1>CSS flex-grow Property</h1>
+        </header>
+        <p>The <code>flex-grow</code> property specifies how much the item will grow relative to the rest of the flexible items inside the same container.</p>
+        <p><span>Note:</span> If the element is not a flexible item, the <code>flex-grow</code> property has no effect.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Let the second flex-item grow three times wider than the rest:</p>
+          <pre><code>div:nth-of-type(1) {flex-grow: 1;}
+div:nth-of-type(2) {flex-grow: 3;}
+div:nth-of-type(3) {flex-grow: 1;}</code></pre>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><i>number</i><p>A number specifying how much the item will grow relative to the rest of the flexible items. The default value is 0.</p></li>
+        </ul>
+      </section>
+      <section id="CSS_flex-shrink_Property" class="main-section">
+        <header>
+          <h1>CSS flex-shrink Property</h1>
+        </header>
+        <p>The <code>flex-shrink</code> property specifies how the item will shrink relative to the rest of the flexible items inside the same container.</p>
+        <p><pan class="bold">Note:</span> If the element is not a flexible item, the <code>flex-shrink</code> property has no effect.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Let the second flex-item shrink three times more than the rest:</p>
+          <pre><code>div:nth-of-type(2) {
+  flex-shrink: 3;
+}</code></pre>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><i>number</i><p>A number specifying how much the item will shrink relative to the rest of the flexible items. The default value is 1.</p></li>
+        </ul>
+      </section>
+      <section id="CSS_flex_Property" class="main-section">
+        <header>
+          <h1>CSS flex Property</h1>
+        </header>
+        <p>The <code>flex</code> property is a shorthand property for:</p>
+        <ul>
+          <li><code>flex-basis</code></li>
+          <li><code>flex-grow</code></li>
+          <li><code>flex-shrink</code></li>
+        </ul>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Let all the flexible items be the same length, regardless of its content:</p>
+          <pre><code>div {
+  -ms-flex: 1; /* Internet Explorer 10 */
+  flex: 1;
+}</code></pre>
+          <p><span class="bold">Note:</span> Internet Explorer 11 and newer versions support the <code>flex</code> property. Internet Explorer 10 supports an alternative, the <code>-ms-flex</code> property.</p>
+        </div>
+        <h4>Property Values</h4>
+        <ul>
+          <li><code>auto</code>: Same as <code>1 1 auto</code>.</li>
+          <li><code>none</code>: Same as <code>0 0 auto</code>.</li>
+          <li><code>flex-basis</code> property possible values.</li>
+          <li><code>flex-grow</code> property possible values.</li>
+          <li><code>flex-shrink</code> property possible values.</li>
+        </ul>
+      </section>
+      <section id="CSS_Flex_Responsive" class="main-section">
+        <header>
+          <h1>CSS Flex Responsive</h1>
+          <p>You can use media queries to create different layouts for different screen sizes and devices.</p>
+          <div class="example">
+          <h4>Example</h4>
+          <p>If you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), you can change the <code>flex-direction</code> from <code>row</code> to <code>column</code> at a specific breakpoint (800px in the example below):</p>
+          <pre><code>.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}</code></pre>
+        </div>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Another way is to change the percentage of the <code>flex</code> property of the flex items to create different layouts for different screen sizes. Note that we also have to include <code>flex-wrap: wrap;</code> on the flex container for this example to work:</p>
+          <pre><code>.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}</code></pre>
+        </div>
+        </header>
+      </section>
+      <section id="Reference" class="main-section">
+        <header>
+          <h1>Reference</h1>
+        </header>
+        <ul><li>All the documentation in this page is taken from <a target="_blank" href="https://www.w3schools.com/css/css3_flexbox.asp">W3Schools</a>.</li></ul>
+      </section>
+    </main>
+  </body>
+</html>
