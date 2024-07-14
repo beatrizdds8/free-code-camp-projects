@@ -4,69 +4,96 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <title>Natuvita Women's Formula</title>
   </head>
   <body>
     <header id="header">
-      <img id="header-img" alt="logo-image" src="logo1.png" />
+      <img id="header-img" alt="logo-image" src="./images/logo1.png" />
       <nav id="nav-bar">
-        <ul>
-          <li><a class="nav-link" >DESCRIPTION</a></li>
-          <li><a class="nav-link">HIGHLIGHTS</a></li>
-          <li><a class="nav-link">DIETARY RESTRICTIONS</a></li>
-          <li><a class="nav-link"></a>SUGGESTED DOSAGE</li>
-          <li><a class="nav-link"></a>PRICING</li>
-        </ul>
+          <a href="#DESCRIPTION" class="nav-link" >DESCRIPTION</a>
+          <a href="#HIGHLIGHTS" class="nav-link">HIGHLIGHTS</a>
+          <a href="#DIETARY_RESTRICTIONS" class="nav-link">DIETARY RESTRICTIONS</a>
+          <a href="#SUGGESTED_DOSAGE" class="nav-link">SUGGESTED DOSAGE</a>
+          <a href="#PRICING" class="nav-link">PRICING</a>
       </nav>
     </header>
-    <div id="subscribe">
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <label for="email">Subscribe & save 10%</label>
-        <input id="email" type="email" name="email" placeholder="Enter your email address"></input>
-        <input type="submit" href></input>
-      </form>
-    </div>
-    <section id="DESCRIPTION">
-      <header>DESCRIPTION</header>
-      <p>Natuvita Women's Formula helps to support women’s health and hormones at any age. Vitatree Women's Formula is formulated without synthetic hormones or bioidentical hormones. The whole food vitamin formula helps to find balance in an often-unbalanced world. Vitatree Women's Formula whole food supplement is useful for women of all ages looking for a dietary supplement to support their individual needs.</p>
-      <p>Quantity per bottle: 30 capsules.</p>
-    </section>
-    <section id="HIGHLIGHTS">
-      <header>HIGHLIGHTS</header>
-      <ul>
-        <li>100% pure whole food supplement</li>
-        <li>No synthetic hormones or bioidentical hormones</li>
-        <li>No magnesium stearate, artificial additives, fillers or colours</li>
-        <li>3rd party lab tested to be free of heavy metals</li>
-        <li>GMP certified (Good Manufacturing Practice)</li>
-      </ul>
-      <video id="video" width="300" height="250" autoplay muted>
-        <source src="https://videos.pexels.com/video-files/5866131/5866131-uhd_2560_1440_25fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-    <section id="DIETARY_RESTRICTIONS">
-      <header>DIETARY RESTRICTIONS<header>
-      <ul>
-        <li>Dairy free</li>
-        <li>Gluten free</li>
-        <li>Keto friendly</li>
-        <li>Nut free</li>
-        <li>Paleo friendly</li>
-        <li>Sugar free</li>
-        <li>Vegan friendly</li>
-      </ul>
-    </section>
-    <section id="SUGGESTED_DOSAGE">
-      <header>SUGGESTED DOSAGE</header>
-      <p>Consume, orally, one capsule daily, preferably with a meal.</p>
-      <p>Cautions and Warnings: Consult a health care practitioner before use if you are breastfeeding, or if you have a liver disorder or develop symptoms of liver trouble. Consult a health care practitioner before use if you are taking hormone-containing medications such as progesterone preparations, oral contraceptives, or hormone replacement therapy; CNS depressants, antihistamines, or if you have a cardiac disorder, a uterine bleeding condition, or thyroid disorder or if you are taking blood thinners. Consult a health care practitioner before use if you have high blood pressure. Consult a health care practitioner before use if you are pregnant. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-    </section>
-    <section id="PRICING">
-      <div></div>
-      <div></div>
-      <div></div>
-    </section>
-
+    <main>
+      <div id="subscribe">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="email">Subscribe & save 10%</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email address"></input>
+          <input id="submit" type="submit" value="Sign up"></input>
+        </form>
+      </div>
+      <section id="DESCRIPTION">
+        <header>DESCRIPTION</header>
+        <p>Natuvita Women's Formula helps to support women’s health and hormones at any age. Vitatree Women's Formula is formulated without synthetic hormones or bioidentical hormones. The whole food vitamin formula helps to find balance in an often-unbalanced world. Vitatree Women's Formula whole food supplement is useful for women of all ages looking for a dietary supplement to support their individual needs.</p>
+        <p>Quantity per bottle: 30 capsules.</p>
+      </section>
+      <section id="HIGHLIGHTS">
+        <header>HIGHLIGHTS</header>
+        <ul>
+          <li>100% pure whole food supplement</li>
+          <li>No synthetic hormones or bioidentical hormones</li>
+          <li>No magnesium stearate, artificial additives, fillers or colours</li>
+          <li>3rd party lab tested to be free of heavy metals</li>
+          <li>GMP certified (Good Manufacturing Practice)</li>
+        </ul>
+        <video id="video" autoplay muted>
+          <source src="https://videos.pexels.com/video-files/5866131/5866131-uhd_2560_1440_25fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      <section id="DIETARY_RESTRICTIONS">
+        <header>DIETARY RESTRICTIONS</header>
+        <ul>
+          <li>Dairy free</li>
+          <li>Gluten free</li>
+          <li>Keto friendly</li>
+          <li>Nut free</li>
+          <li>Paleo friendly</li>
+          <li>Sugar free</li>
+          <li>Vegan friendly</li>
+        </ul>
+      </section>
+      <section id="SUGGESTED_DOSAGE">
+        <header>SUGGESTED DOSAGE</header>
+        <p>Consume, orally, one capsule daily, preferably with a meal.</p>
+        <p>Cautions and Warnings: Consult a health care practitioner before use if you are breastfeeding, or if you have a liver disorder or develop symptoms of liver trouble. Consult a health care practitioner before use if you are taking hormone-containing medications such as progesterone preparations, oral contraceptives, or hormone replacement therapy; CNS depressants, antihistamines, or if you have a cardiac disorder, a uterine bleeding condition, or thyroid disorder or if you are taking blood thinners. Consult a health care practitioner before use if you have high blood pressure. Consult a health care practitioner before use if you are pregnant. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      </section>
+      <section id="PRICING">
+        <header>PRICING</header>
+        <div id="products">
+          <div class="product">
+            <img alt="product1" src="./images/product1.png" />
+            <p>Natuvita Women's Formula</p>
+            <h3>$41.99</h3>
+            <h2 >$35.99</h2>
+            <h2><a>Buy Now</a></h2>
+          </div>
+          <div class="product">
+            <img alt="product2" src="./images/product2.png" />
+            <p>Natuvita Women's Formula - 2 Bottle</p>
+            <h3>$71.98</h3>
+            <h2 >$65.99</h2>
+            <h2><a>Buy Now</a></h2>
+          </div>
+          <div class="product">
+            <img alt="product3" src="./images/product3.png" />
+            <p>Natuvita Women's Formula- 3 Bottle</p>
+            <h3>$107.97</h3>
+            <h2 >$97.99</h2>
+            <h2><a>Buy Now</a></h2>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
+  <footer>
+    <h4><a>Privacy</a></h4>
+    <h4><a>Terms</a></h4>
+    <h4><a>Contact</a></h4>
+    <p>Copyright 2024, Natuvita</p>
+  </footer>
 </html>
